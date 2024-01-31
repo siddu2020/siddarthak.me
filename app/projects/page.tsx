@@ -11,7 +11,7 @@ import { Eye } from "lucide-react";
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
-  let views = [];
+  const views:Record<string, number> = {};
 
   const featured = allProjects.find((project) => project.slug === "unkey")!;
   const top2 = allProjects.find((project) => project.slug === "planetfall")!;
